@@ -10,6 +10,7 @@ pipeline {
         stage('Code Analysis') {
             steps {
                 sh '''
+                bat '''
                 mvn clean verify sonar:sonar
                 '''
             }
@@ -17,13 +18,14 @@ pipeline {
         stage('Unit Test') {
             steps {
                 sh '''
+                bat '''
                 mvn test
                 '''
             }
         }
         stage('Build JAR') {
             steps {
-                sh '''
+                bat '''
                 mvn package
                 '''
             }
@@ -31,6 +33,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
+                bat '''
                 mvn deploy
                 '''
             }
