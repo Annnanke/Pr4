@@ -63,12 +63,7 @@
             </plugin>
 
         </plugins>
-             <distributionManagement>
-    <repository>
-        <id>Pr4</id>
-        <url>https://github.com/Annnanke/Pr4</url>
-    </repository>
-</distributionManagement>
+       
 
     </build>
 
