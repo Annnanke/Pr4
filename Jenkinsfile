@@ -2,35 +2,35 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.9.3'
+        maven 'Maven 3.9.3' // replaced Maven version here
         jdk 'jdk17'
     }
 
     stages {
         stage('Code Analysis') {
             steps {
-                sh '''
+                bat '''
                 mvn clean verify sonar:sonar
                 '''
             }
         }
         stage('Unit Test') {
             steps {
-                sh '''
+                bat '''
                 mvn test
                 '''
             }
         }
         stage('Build JAR') {
             steps {
-                sh '''
+                bat '''
                 mvn package
                 '''
             }
         }
         stage('Deploy') {
             steps {
-                sh '''
+                bat '''
                 mvn deploy
                 '''
             }
