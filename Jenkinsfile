@@ -9,28 +9,28 @@ pipeline {
     stages {
         stage('Code Analysis') {
             steps {
-                sh '''
+                bat '''
                 mvn clean verify spotbugs:spotbugs
                 '''
             }
         }
         stage('Unit Test') {
             steps {
-                sh '''
+                bat '''
                 mvn test
                 '''
             }
         }
         stage('Build JAR') {
             steps {
-                sh '''
+                bat '''
                 mvn package
                 '''
             }
         }
         stage('Deploy') {
             steps {
-                sh '''
+                bat '''
                 mvn deploy
                 '''
             }
