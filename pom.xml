@@ -14,14 +14,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-          <distributionManagement>
-        <repository>
-            <id>12345</id>
-            <url>https://pr4.jfrog.io/artifactory/api/maven/12345</url>
-        </repository>
-    </distributionManagement>
-
-
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -61,10 +53,6 @@
                     <xmlOutput>false</xmlOutput>
                 </configuration>
             </plugin>
-
         </plugins>
-       
-
     </build>
-
 </project>
