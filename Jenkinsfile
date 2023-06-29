@@ -21,17 +21,10 @@ pipeline {
                 '''
             }
         }
-        stage('Build JAR') {
+        stage('Build and Install JAR') {
             steps {
                 bat '''
-                mvn package
-                '''
-            }
-        }
-        stage('Deploy') {
-            steps {
-                bat '''
-                mvn deploy
+                mvn clean install
                 '''
             }
         }
