@@ -17,7 +17,7 @@
           <distributionManagement>
         <repository>
             <id>12345</id>
-            <url>https://kma.jfrog.io/artifactory/api/maven/12345</url>
+            <url>https://pr4.jfrog.io/artifactory/api/maven/12345</url>
         </repository>
     </distributionManagement>
 
